@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body ng-app="myApp">
+<nav class="navbar navbar-inverse">	
+<div class="container-fluid">
+  		<ul class="nav navbar-nav" >
+  			<li><a href="#/"> Home</a></li>
+  			<li><a> Profile </a></li>
+  			<li><a> Employee details</a></li>
+  		</ul>		
+  		<form class="navbar-form navbar-right">
+  		 <div class="form-group ">
+    <input type="text" class="form-control " placeholder="Search" ng-model="search">
+  </div></form>
+  </div>
+</nav >
+<div ng-view style="margin: 100px 250px; height:270px; width: 700px;">
+
+</div>
+<div class="panel-footer" style="height: 45px; padding: 15px 450px;" >
+	copyright&copy;2016&reg;employment_details
+</div>
+
+<script src="js/myScript.js"></script>
+</body>
+</html>

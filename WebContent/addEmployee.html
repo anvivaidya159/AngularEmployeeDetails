@@ -1,0 +1,81 @@
+
+<form class="form-horizontal" name="uform">
+  <div class="form-group">
+  	<input type="hidden" name="id" ng-model="id">
+    <label class="col-sm-2 control-label">Firstname</label>
+    <div class="col-sm-10" >
+      <input type="text" class="form-control" placeholder="Firstname" name="fname" ng-model="fname" 
+      		required="required" ng-maxlength="15" ng-minlength="2" ng-pattern="/[a-zA-Z]/">
+     <div  ng-show="uform.$invalid && uform.$dirty">
+      <span ng-show="uform.fname.$dirty && uform.fname.$error.required">
+			The field is required.
+	</span>
+	<span ng-show="uform.fname.$dirty && uform.fname.$error.minlength">
+	enter at least 2 letters.
+	</span>
+	<span ng-show="uform.fname.$dirty && uform.fname.$error.maxlength">
+	enter only 15 letters.
+	</span>
+	<span ng-show="uform.fname.$dirty && uform.fname.$error.pattern">
+	enter only alphabatic letters.
+	</span>
+	</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Middlename</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Middle Initial" name="mname" 
+      		ng-model="mname" required="required"  ng-pattern="/[a-zA-Z]{1}/">
+      	 <div  ng-show="uform.$invalid && uform.$dirty">	
+      	   <span ng-show="uform.lname.$dirty && uform.lname.$error.required">
+			The field is required.
+	</span>
+      	<span ng-show="uform.mname.$dirty && uform.mname.$error.pattern">
+			enter only 1 alphabatic letter.
+	</span></div>
+    </div>
+  </div>
+ <div class="form-group">
+    <label class="col-sm-2 control-label">Lastname</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Lastname" name="lname" ng-model="lname" 
+      		required="required" ng-maxlength="15" ng-minlength="2" ng-pattern="/[a-zA-Z]/">
+       <div  ng-show="uform.$invalid && uform.$dirty">
+      <span ng-show="uform.lname.$dirty && uform.lname.$error.required">
+			The field is required.
+	</span>
+	<span ng-show="uform.lname.$dirty && uform.lname.$error.minlength">
+	enter at least 2 letters.
+	</span>
+	<span ng-show="uform.lname.$dirty && uform.lname.$error.maxlength">
+	enter only 15 letters.
+	</span>
+	<span ng-show="uform.lname.$dirty && uform.lname.$error.pattern">
+	enter only alphabatic letters.
+	</span></div>
+    </div>
+  </div>
+  <div class="form-group">
+   <label class="col-sm-2 control-label">BirthDate</label>
+   <div class="col-sm-10">
+   <input type="date" name="bdate" class="form-control" ng-model="birthdate" required="required">
+    <div  ng-show="uform.$invalid && uform.$dirty">
+      <span ng-show="uform.bdate.$dirty && uform.bdate.$error.required">
+			The field is required.
+	</span>
+   </div>
+   </div>
+   
+   
+   
+ <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-2">
+      <button type="submit" class="btn btn-primary" ng-click="saveEmployee()">Save</button>
+    </div>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary" ng-click="backHome()">Cancel</button>
+    </div>
+  </div>
+</form>
+  
